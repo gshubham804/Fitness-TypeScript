@@ -10,6 +10,14 @@
       "StackName": "amplify-gymtypescript-dev-94213",
       "StackId": "arn:aws:cloudformation:us-east-1:917201051433:stack/amplify-gymtypescript-dev-94213/06f40660-eafb-11ed-860f-0ee4cc0d366d",
       "AmplifyAppId": "d172w1eyb7h2yh"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d172w1eyb7h2yh",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
