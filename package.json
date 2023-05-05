@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^4.6.1",
     "@heroicons/react": "^2.0.13",
+    "aws-amplify": "^5.2.0",
     "framer-motion": "^7.6.19",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
