@@ -17,6 +17,9 @@
           "appId": "d172w1eyb7h2yh",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "gymtypescript10a3a186": {}
       }
     }
   }
