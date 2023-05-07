@@ -1,4 +1,4 @@
-import { Authenticator } from "@aws-amplify/ui-react";
+import { Authenticator} from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
@@ -8,6 +8,8 @@ import ContactUs from "@/scenes/contactUs";
 import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
+
+
 
 function Authentication() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(

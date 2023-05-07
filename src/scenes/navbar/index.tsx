@@ -32,7 +32,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
             {/* RIGHT SIDE */}
             {isAboveMediumScreens ? (
-              <div className={`${flexBetween} w-full`}>
+              <>
+              {
+                user ? (
+                  <>
+                  <div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm`}>
                   <Link
                     page="Home"
@@ -64,6 +68,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   </ActionButton>
                 </div>
               </div>
+                  </>
+                ):""
+              }
+              </>
             ) : (
               <button
                 className="rounded-full bg-secondary-500 p-2"
