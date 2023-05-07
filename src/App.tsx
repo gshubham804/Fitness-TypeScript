@@ -1,10 +1,9 @@
-
-import Auth from "./Auth";
+import Authentication from "./Authentication";
 
 function App() {
   return (
-    <div className="app bg-gray-20 my-20">
-          <Auth/>
+    <div className="app my-20 bg-gray-20">
+      <Authentication />
     </div>
   );
 }

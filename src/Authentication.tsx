@@ -9,7 +9,7 @@ import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
 
-function Auth() {
+function Authentication() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
   );
@@ -28,31 +28,29 @@ function Auth() {
   }, []);
 
   return (
-    <div>
+    <Authenticator.Provider>
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
       <Authenticator>
         {({ signOut }) => {
           return (
             <>
               <main>
-                <Navbar
-                  signOut={signOut}
-                  isTopOfPage={isTopOfPage}
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
                 <Home setSelectedPage={setSelectedPage} />
                 <Benefits setSelectedPage={setSelectedPage} />
                 <OurClasses setSelectedPage={setSelectedPage} />
                 <ContactUs setSelectedPage={setSelectedPage} />
               </main>
-              <button onClick={signOut}>Signout</button>
             </>
           );
         }}
       </Authenticator>
       <Footer />
-    </div>
+    </Authenticator.Provider>
   );
 }
 
-export default Auth;
+export default Authentication;

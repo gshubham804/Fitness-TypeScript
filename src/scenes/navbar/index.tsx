@@ -5,26 +5,20 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
-import { AuthEventData } from "@aws-amplify/ui";
+import { useAuthenticator } from "@aws-amplify/ui-react";
 
 type Props = {
   isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
-  signOut: ((data?: AuthEventData | undefined) => void) | undefined;
 };
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage,signOut }: Props) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
-
-  // function handleSignOut() {
-  //   console.log("hello")
-  //   signout;
-  //   console.log(signout)
-  // }
+  const { user, signOut } = useAuthenticator((context) => [context.signOut]);
 
   return (
     <nav>
@@ -63,7 +57,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage,signOut }: Props) =
                 </div>
                 <div className={`${flexBetween} gap-8`}>
                   <p className="cursor-pointer" onClick={signOut}>
-                  Sign out
+                    {user ? "Sign out" : ""}
                   </p>
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a Member
