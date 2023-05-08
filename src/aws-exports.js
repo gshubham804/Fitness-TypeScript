@@ -25,7 +25,20 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
-    ]
+    ],
+    "geo": {
+        "amazon_location_service": {
+            "region": "us-east-1",
+            "maps": {
+                "items": {
+                    "gymreacttypescriptmap-dev": {
+                        "style": "VectorEsriStreets"
+                    }
+                },
+                "default": "gymreacttypescriptmap-dev"
+            }
+        }
+    }
 };
 
 

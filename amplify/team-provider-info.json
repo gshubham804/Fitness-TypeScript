@@ -20,6 +20,9 @@
       },
       "auth": {
         "gymtypescript10a3a186": {}
+      },
+      "geo": {
+        "gymreacttypescriptmap": {}
       }
     }
   }
