@@ -8,8 +8,6 @@ import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
-import { createMap } from "maplibre-gl-js-amplify";
-import "maplibre-gl/dist/maplibre-gl.css";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -17,16 +15,6 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-
-  async function initializeMap() {
-    const map = await createMap({
-        container: "map", // An HTML Element or HTML element ID to render the map in https://maplibre.org/maplibre-gl-js-docs/api/map/
-        center: [-123.1187, 49.2819], // [Longitude, Latitude]
-        zoom: 11,
-    })
-}
-
-initializeMap();
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
@@ -108,7 +96,6 @@ initializeMap();
           </div>
         </div>
       )}
-      {/* <div id="map"></div> */}
     </section>
   );
 };

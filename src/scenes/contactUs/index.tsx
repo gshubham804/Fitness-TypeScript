@@ -3,6 +3,8 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
+import { createMap } from "maplibre-gl-js-amplify";
+import "maplibre-gl/dist/maplibre-gl.css";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -25,8 +27,19 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     }
   };
 
+  async function initializeMap() {
+    const map = await createMap({
+        container: "map", // An HTML Element or HTML element ID to render the map in https://maplibre.org/maplibre-gl-js-docs/api/map/
+        center: [-123.1187, 49.2819], // [Longitude, Latitude]
+        zoom: 11,
+    })
+}
+
+initializeMap();
+
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
+            <div id="map" className="h-[20rem] w-[100%]"></div>
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
       >
