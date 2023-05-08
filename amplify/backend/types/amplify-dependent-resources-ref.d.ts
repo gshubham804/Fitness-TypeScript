@@ -1,4 +1,11 @@
 export type AmplifyDependentResourcesAttributes = {
+  "analytics": {
+    "gymtypescript": {
+      "Id": "string",
+      "Region": "string",
+      "appName": "string"
+    }
+  },
   "auth": {
     "gymtypescript10a3a186": {
       "AppClientID": "string",
