@@ -1,0 +1,21 @@
+{
+    "appName": "gymtypescript",
+    "roleName": "pinpointLambdaRole8d6257e5",
+    "cloudformationPolicyName": "cloudformationPolicy8d6257e5",
+    "cloudWatchPolicyName": "cloudWatchPolicy8d6257e5",
+    "pinpointPolicyName": "pinpointPolicy8d6257e5",
+    "authPolicyName": "pinpoint_amplify_8d6257e5",
+    "unauthPolicyName": "pinpoint_amplify_8d6257e5",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

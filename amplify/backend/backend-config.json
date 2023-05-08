@@ -1,4 +1,10 @@
 {
+  "analytics": {
+    "gymtypescript": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
   "auth": {
     "gymtypescript10a3a186": {
       "customAuth": false,
