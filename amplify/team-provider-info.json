@@ -23,6 +23,9 @@
       },
       "geo": {
         "gymreacttypescriptmap": {}
+      },
+      "analytics": {
+        "gymtypescript": {}
       }
     }
   }

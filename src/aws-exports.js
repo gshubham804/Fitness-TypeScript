@@ -26,6 +26,14 @@ const awsmobile = {
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
     ],
+    "aws_mobile_analytics_app_id": "62ee041fea954bd69ddffb65127b9cd2",
+    "aws_mobile_analytics_app_region": "us-east-1",
+    "Analytics": {
+        "AWSPinpoint": {
+            "appId": "62ee041fea954bd69ddffb65127b9cd2",
+            "region": "us-east-1"
+        }
+    },
     "geo": {
         "amazon_location_service": {
             "region": "us-east-1",

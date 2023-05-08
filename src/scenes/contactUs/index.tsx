@@ -5,6 +5,7 @@ import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
 import { createMap } from "maplibre-gl-js-amplify";
 import "maplibre-gl/dist/maplibre-gl.css";
+import { Analytics } from "aws-amplify";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -26,6 +27,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
       e.preventDefault();
     }
   };
+
+  Analytics.record({ 
+    name: 'contactusVisit',
+  immediate: true });
 
   async function initializeMap() {
     const map = await createMap({

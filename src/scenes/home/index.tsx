@@ -8,6 +8,7 @@ import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import { Analytics } from "aws-amplify";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -15,7 +16,9 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-
+  Analytics.record({ 
+    name: 'homeVisit',
+  immediate: true });
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
